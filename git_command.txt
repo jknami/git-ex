@@ -9,17 +9,26 @@ git commit : 에디터에서 직접 commit 내용 작성
 git config --global core.editor "nano" : 에디터 변경 명령 ex)"nano"에디터를 사용 할 경우
 git commit -m "commit 내용" : 버전관리 상태로(cml에 직접 commit내용 작성)
 git commit -am "commit 내용" : add를 생략하고 바로 번전관리 상태로 (단, 처음 생성한 파일(untracked file)은 반드시 git add과정을 거쳐야 한다)
+git commit --amend : 직전 commit 메세지 수정
 git log : 버전상태 확인..(master)
 git log --stat : 버전의 상세 상태 확인
+git log --all --graph --oneline : 그래프가 포함된 버전 표시
 git diff : Show changens
 git reset --hard : 최종 commit전 상태로 되롤리기
 git reset --hard commit ID : 해당 commit ID 버전으로 reset
 git revert commit ID : 해당 commit ID 바로 전 버전으로 변경되는 것관 같은 결과(이 경우 새로운 버전이 생긴다)
 git log -p : 번전관리 상세, 차이점 보기
+
+<checkout - head를 옮긴다>
+YouTube : https://youtu.be/6WDDeSDZcwM?list=PLuHgQVnccGMDU5eAzOz2dZ9KXJF6dkNg3
 git checkout commit ID : 해당 버전으로 이동
 git checkout master : master 브랜치로으로 이동
+
+<reset : 브랜치를 옮긴다>
+YouTube : https://youtu.be/8npBGfy47y0?list=PLuHgQVnccGMDU5eAzOz2dZ9KXJF6dkNg3
+
 .gitignore : 버전관리 제외하고 싶은 경우
-branch
+
 tag : 버전의 이름을 붙여서 관리 용이
 
 CLI backup
@@ -37,8 +46,9 @@ CLI 브랜치 & 충돌
 git branch : branch목록보기
 git branch 이름 : branch 만들기
 git checkout branch명 : 해당 branch로 이동
+git branch -D [branch명] : 해당 branch 삭제
 git log --all --graph --oneline
-git commit amend : commit 메세지 수정
+
 
 git merge 대상 branch : 현상태의 branch와 병합
 
@@ -53,3 +63,6 @@ YouTube : https://youtu.be/78rykXw9_0g
     Your identification has been saved in /c/Users/jknam_home/.ssh/id_rsa
     Your public key has been saved in /c/Users/jknam_home/.ssh/id_rsa.pub
 		
+<branch>
+git branch 현재 branch 확인
+git branch [원하는 branch]
